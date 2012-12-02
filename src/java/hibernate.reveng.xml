@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="deportciencias"/>
+  <table-filter match-name="encuentro_equipo"/>
+  <table-filter match-name="registro_usuario_equipo"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="equipos"/>
+  <table-filter match-name="torneos"/>
+  <table-filter match-name="encuentros"/>
+</hibernate-reverse-engineering>

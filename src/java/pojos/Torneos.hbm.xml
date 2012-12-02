@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2/12/2012 12:37:18 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojos.Torneos" table="torneos" catalog="deportciencias">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nomTorneo" type="string">
+            <column name="nom_torneo" length="30" not-null="true" />
+        </property>
+        <property name="capacidadEqui" type="int">
+            <column name="capacidad_equi" not-null="true" />
+        </property>
+        <property name="desc" type="string">
+            <column name="desc" length="400" not-null="true" />
+        </property>
+        <property name="categoria" type="string">
+            <column name="categoria" length="4" not-null="true" />
+        </property>
+        <property name="fechaIni" type="timestamp">
+            <column name="fecha_ini" length="19" not-null="true" />
+        </property>
+        <property name="fechaFin" type="timestamp">
+            <column name="fecha_fin" length="19" not-null="true" />
+        </property>
+        <property name="limiteEquipo" type="int">
+            <column name="limite_equipo" not-null="true" />
+        </property>
+        <set name="encuentroses" inverse="true">
+            <key>
+                <column name="id_torneo" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Encuentros" />
+        </set>
+    </class>
+</hibernate-mapping>

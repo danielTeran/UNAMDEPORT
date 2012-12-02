@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2/12/2012 12:37:18 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojos.Usuario" table="usuario" catalog="deportciencias">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="int">
+            <column name="username" not-null="true" />
+        </property>
+        <property name="privilegios" type="int">
+            <column name="privilegios" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="30" not-null="true" />
+        </property>
+        <set name="registroUsuarioEquipos" inverse="true">
+            <key>
+                <column name="id_usuario" not-null="true" />
+            </key>
+            <one-to-many class="pojos.RegistroUsuarioEquipo" />
+        </set>
+        <set name="equiposes" inverse="true">
+            <key>
+                <column name="capitan" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Equipos" />
+        </set>
+    </class>
+</hibernate-mapping>

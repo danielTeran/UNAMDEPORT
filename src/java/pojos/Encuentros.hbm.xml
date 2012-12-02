@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2/12/2012 12:37:18 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojos.Encuentros" table="encuentros" catalog="deportciencias">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="torneos" class="pojos.Torneos" fetch="select">
+            <column name="id_torneo" not-null="true" />
+        </many-to-one>
+        <property name="juez" type="string">
+            <column name="juez" length="50" />
+        </property>
+        <property name="hora" type="time">
+            <column name="hora" length="8" not-null="true" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="fecha" length="19" not-null="true" />
+        </property>
+        <property name="sede" type="string">
+            <column name="sede" length="180" />
+        </property>
+        <set name="encuentroEquipos" inverse="true">
+            <key>
+                <column name="id_encuentro" not-null="true" />
+            </key>
+            <one-to-many class="pojos.EncuentroEquipo" />
+        </set>
+    </class>
+</hibernate-mapping>
