@@ -8,7 +8,7 @@
     <center>
     <h:form>
     <h:head>
-        <title>DeportCiencias</title>
+        <title>Basquetbol</title>
         <h:panelGrid>  
             <h:graphicImage url="Imagenes/fondoDep.png"
                             style="position: absolute; left: 440px; top: 0px; width: 860px; height: 110px"/>
@@ -26,7 +26,7 @@
         
     <h:body>   
         <!--Menú principal-->
-        <h:panelGrid style="position: absolute; left: 160px; top: 111px"> 
+        <h:panelGrid style="position: absolute; left: 160px; top: 111px" columns="2"> 
         <p:menubar>  
             <p:submenu label="¿Quiénes somos?" icon="ui-icon-document"/>  
             
@@ -52,23 +52,42 @@
             <p:submenu label="Contacto" icon="ui-icon-gear"/>  
                 <p:menuitem value="Ingresar" icon="ui-icon-close" />  
         </p:menubar>
-    </h:panelGrid>
+        <p:commandButton value="Inicio" style="left: 460px"/>    
+        </h:panelGrid>
         
-    <!--Noticias-->    
-    <h:panelGrid style=" position: absolute; left: 435px; top: 200px">
-        <p:carousel value="Noticias" itemStyle="height:400px;width:560px;" pageLinks="4" autoPlayInterval="4000"   
-                    rows="1" effect="easeInStrong" circular="true">  
-            <p:graphicImage value="/Imagenes/imagen.jpg"
-                            style="width: 560px"/> 
-            <p:graphicImage value="/Imagenes/imagen1.jpg"
-                            style="width: 560px"/>  
-            <p:graphicImage value="/Imagenes/imagen2.jpg"
-                            style="width: 560px"/>  
-            <p:graphicImage value="/Imagenes/imagen4.jpg"
-                            style="width: 560px"/>  
-        </p:carousel>  
-     </h:panelGrid>
+        <!--Descripción-->
+        <p:fieldset legend="Basquetbol en ciencias" style=" position: absolute; width:370px; top: 190px; left: 210px; font-size: 20px; text-align: left">  
+            <br>
+            <h:outputText value="ENTRENAMIENTOS:"/>	
+            </br>
+            <br>basquetbol femenil y basquetbol varonil.</br>
+            <br>Entrenador: Melchor Maciel Magaña</br>
+            <br>-Martes y Jueves de 14:00 a 17:00 hrs.</br>
+            <br>-Zona deportiva Topotlachco</br>
+        </p:fieldset>
+        
+        <!--Galería-->
+        <h:panelGrid style=" position: absolute; left: 730px; top: 190px">
+            <p:carousel itemStyle="height:400px;width:500px;" pageLinks="4" autoPlayInterval="4000"   
+                        rows="1" effect="easeInStrong" circular="true">  
+                <p:graphicImage url="/Imagenes/basquetbol/basquetbol.png"
+                                style="width: 500px"/> 
+                <p:graphicImage url="/Imagenes/basquetbol/bf.png"
+                                style="width: 500px"/>
+                <p:graphicImage url="/Imagenes/basquetbol/bv.png"
+                                style="width: 500px"/>
+                <p:graphicImage value="/Imagenes/basquetbol/basquetbol1.jpg"
+                                style="width: 500px"/>  
+                <p:graphicImage value="/Imagenes/basquetbol/basquetbol2.jpg"
+                                style="width: 500px"/>  
+                <p:graphicImage value="/Imagenes/basquetbol/basquetbol3.jpg"
+                                style="width: 500px"/>
+                <p:graphicImage value="/Imagenes/basquetbol/basquetbol4.jpg"
+                                style="width: 500px"/>
+            </p:carousel>  
+        </h:panelGrid>
+        
     </h:body> 
-    </h:form>
-    </center>
+</h:form>
+</center>
 </f:view>

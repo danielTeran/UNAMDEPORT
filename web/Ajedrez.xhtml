@@ -8,7 +8,7 @@
     <center>
     <h:form>
     <h:head>
-        <title>DeportCiencias</title>
+        <title>Ajedrez</title>
         <h:panelGrid>  
             <h:graphicImage url="Imagenes/fondoDep.png"
                             style="position: absolute; left: 440px; top: 0px; width: 860px; height: 110px"/>
@@ -26,7 +26,7 @@
         
     <h:body>   
         <!--Menú principal-->
-        <h:panelGrid style="position: absolute; left: 160px; top: 111px"> 
+        <h:panelGrid style="position: absolute; left: 160px; top: 111px" columns="2"> 
         <p:menubar>  
             <p:submenu label="¿Quiénes somos?" icon="ui-icon-document"/>  
             
@@ -52,23 +52,34 @@
             <p:submenu label="Contacto" icon="ui-icon-gear"/>  
                 <p:menuitem value="Ingresar" icon="ui-icon-close" />  
         </p:menubar>
-    </h:panelGrid>
+        <p:commandButton value="Inicio" style="left: 460px"/>    
+        </h:panelGrid>
+                
+        <!--Descripción-->
+        <p:fieldset legend="Club de Ajedrez Ciencias" style=" position: absolute; width: 500px; top: 200px; left: 200px; font-size: 20px; text-align: justify">  
+            <h:outputText  
+                value="Los logros obtenidos por el Ajedrez de la Facultad es el resultado del trabajo organizado y sistemático de varios estudiantes de la Facultad desde los años 90´s donde podriamos mencionar a el gran Amador Roldán Aguilar como el primer impulsor del Ajedrez de esa época; dicho esfuerzo se incrementó a partir del año 2001, dando como resultado la conformación del Club de Ajedrez de la Facultad de Ciencias Akiba Rubinstein, siendo el responsable del mismo el destacado Ajedrecista de la Facultad Daniel Pellicer; el cual tuvo un gran reconocimiento en nuestra Universidad. Dejando de funcionar en noviembre de 2008 por las actividades Académicas de sus miembros. Por lo que Deportciencias a partir de esta fecha retoma la organización del Ajedrez en la Facultad."/>  
+        </p:fieldset>
         
-    <!--Noticias-->    
-    <h:panelGrid style=" position: absolute; left: 435px; top: 200px">
-        <p:carousel value="Noticias" itemStyle="height:400px;width:560px;" pageLinks="4" autoPlayInterval="4000"   
-                    rows="1" effect="easeInStrong" circular="true">  
-            <p:graphicImage value="/Imagenes/imagen.jpg"
-                            style="width: 560px"/> 
-            <p:graphicImage value="/Imagenes/imagen1.jpg"
-                            style="width: 560px"/>  
-            <p:graphicImage value="/Imagenes/imagen2.jpg"
-                            style="width: 560px"/>  
-            <p:graphicImage value="/Imagenes/imagen4.jpg"
-                            style="width: 560px"/>  
-        </p:carousel>  
-     </h:panelGrid>
+        <!--Galería-->
+        <h:panelGrid style=" position: absolute; left: 790px; top: 220px">
+            <p:carousel itemStyle="height:350px;width:450px;" pageLinks="4" autoPlayInterval="4000"   
+                        rows="1" effect="easeInStrong" circular="true">  
+                <p:graphicImage url="/Imagenes/ajedrez/ajedrez.png"
+                                style="width: 450px"/> 
+                <p:graphicImage value="/Imagenes/ajedrez/ajedrezInterno.jpg"
+                                style="width: 450px"/>  
+                <p:graphicImage value="/Imagenes/ajedrez/ajedrezInterno2.jpg"
+                                style="width: 450px"/>  
+                <p:graphicImage value="/Imagenes/ajedrez/ajedrezInterno3.jpg"
+                                style="width: 450px"/>
+                <p:graphicImage value="/Imagenes/ajedrez/ajedrezInterno3.jpg"
+                                style="width: 450px"/>
+            </p:carousel>  
+        </h:panelGrid>
+        
     </h:body> 
-    </h:form>
-    </center>
+</h:form>
+</center>
 </f:view>
+
