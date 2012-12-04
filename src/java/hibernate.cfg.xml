@@ -4,14 +4,16 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/deportciencias</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/deport</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">zuver</property>
-    <mapping resource="pojos/Usuario.hbm.xml"/>
-    <mapping resource="pojos/EncuentroEquipo.hbm.xml"/>
-    <mapping resource="pojos/Torneos.hbm.xml"/>
-    <mapping resource="pojos/Encuentros.hbm.xml"/>
+    <property name="hibernate.connection.password"></property>
     <mapping resource="pojos/RegistroUsuarioEquipo.hbm.xml"/>
+    <mapping resource="pojos/Torneos.hbm.xml"/>
+    <mapping resource="pojos/EncuentroEquipo.hbm.xml"/>
     <mapping resource="pojos/Equipos.hbm.xml"/>
+    <mapping resource="pojos/Encuentros.hbm.xml"/>
+    <mapping resource="pojos/Deportes.hbm.xml"/>
+    <mapping resource="pojos/Usuario.hbm.xml"/>
+
   </session-factory>
 </hibernate-configuration>

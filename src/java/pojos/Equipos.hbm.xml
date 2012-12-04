@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2/12/2012 12:37:18 AM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 4/12/2012 04:02:40 PM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojos.Equipos" table="equipos" catalog="deportciencias">
         <id name="id" type="java.lang.Integer">
@@ -17,7 +17,7 @@
         <property name="puntos" type="int">
             <column name="puntos" not-null="true" />
         </property>
-        <property name="participando" type="boolean">
+        <property name="participando" type="int">
             <column name="participando" not-null="true" />
         </property>
         <set name="registroUsuarioEquipos" inverse="true">

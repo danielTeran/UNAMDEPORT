@@ -1,5 +1,5 @@
 package pojos;
-// Generated 2/12/2012 12:37:15 AM by Hibernate Tools 3.2.1.GA
+// Generated 4/12/2012 04:02:37 PM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;
@@ -13,6 +13,7 @@ public class Torneos  implements java.io.Serializable {
 
 
      private Integer id;
+     private Deportes deportes;
      private String nomTorneo;
      private int capacidadEqui;
      private String desc;
@@ -26,7 +27,8 @@ public class Torneos  implements java.io.Serializable {
     }
 
 	
-    public Torneos(String nomTorneo, int capacidadEqui, String desc, String categoria, Date fechaIni, Date fechaFin, int limiteEquipo) {
+    public Torneos(Deportes deportes, String nomTorneo, int capacidadEqui, String desc, String categoria, Date fechaIni, Date fechaFin, int limiteEquipo) {
+        this.deportes = deportes;
         this.nomTorneo = nomTorneo;
         this.capacidadEqui = capacidadEqui;
         this.desc = desc;
@@ -35,7 +37,8 @@ public class Torneos  implements java.io.Serializable {
         this.fechaFin = fechaFin;
         this.limiteEquipo = limiteEquipo;
     }
-    public Torneos(String nomTorneo, int capacidadEqui, String desc, String categoria, Date fechaIni, Date fechaFin, int limiteEquipo, Set<Encuentros> encuentroses) {
+    public Torneos(Deportes deportes, String nomTorneo, int capacidadEqui, String desc, String categoria, Date fechaIni, Date fechaFin, int limiteEquipo, Set<Encuentros> encuentroses) {
+       this.deportes = deportes;
        this.nomTorneo = nomTorneo;
        this.capacidadEqui = capacidadEqui;
        this.desc = desc;
@@ -52,6 +55,13 @@ public class Torneos  implements java.io.Serializable {
     
     public void setId(Integer id) {
         this.id = id;
+    }
+    public Deportes getDeportes() {
+        return this.deportes;
+    }
+    
+    public void setDeportes(Deportes deportes) {
+        this.deportes = deportes;
     }
     public String getNomTorneo() {
         return this.nomTorneo;

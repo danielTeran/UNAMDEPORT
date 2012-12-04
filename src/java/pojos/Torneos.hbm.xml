@@ -1,13 +1,16 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2/12/2012 12:37:18 AM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 4/12/2012 04:02:40 PM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="pojos.Torneos" table="torneos" catalog="deportciencias">
         <id name="id" type="java.lang.Integer">
             <column name="id" />
             <generator class="identity" />
         </id>
+        <many-to-one name="deportes" class="pojos.Deportes" fetch="select">
+            <column name="id_deporte" not-null="true" />
+        </many-to-one>
         <property name="nomTorneo" type="string">
             <column name="nom_torneo" length="30" not-null="true" />
         </property>
@@ -18,7 +21,7 @@
             <column name="desc" length="400" not-null="true" />
         </property>
         <property name="categoria" type="string">
-            <column name="categoria" length="4" not-null="true" />
+            <column name="categoria" length="1" not-null="true" />
         </property>
         <property name="fechaIni" type="timestamp">
             <column name="fecha_ini" length="19" not-null="true" />

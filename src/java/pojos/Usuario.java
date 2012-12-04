@@ -1,5 +1,5 @@
 package pojos;
-// Generated 2/12/2012 12:37:15 AM by Hibernate Tools 3.2.1.GA
+// Generated 4/12/2012 04:02:37 PM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -15,6 +15,7 @@ public class Usuario  implements java.io.Serializable {
      private int username;
      private int privilegios;
      private String password;
+     private String nombre;
      private Set<RegistroUsuarioEquipo> registroUsuarioEquipos = new HashSet<RegistroUsuarioEquipo>(0);
      private Set<Equipos> equiposes = new HashSet<Equipos>(0);
 
@@ -22,15 +23,17 @@ public class Usuario  implements java.io.Serializable {
     }
 
 	
-    public Usuario(int username, int privilegios, String password) {
+    public Usuario(int username, int privilegios, String password, String nombre) {
         this.username = username;
         this.privilegios = privilegios;
         this.password = password;
+        this.nombre = nombre;
     }
-    public Usuario(int username, int privilegios, String password, Set<RegistroUsuarioEquipo> registroUsuarioEquipos, Set<Equipos> equiposes) {
+    public Usuario(int username, int privilegios, String password, String nombre, Set<RegistroUsuarioEquipo> registroUsuarioEquipos, Set<Equipos> equiposes) {
        this.username = username;
        this.privilegios = privilegios;
        this.password = password;
+       this.nombre = nombre;
        this.registroUsuarioEquipos = registroUsuarioEquipos;
        this.equiposes = equiposes;
     }
@@ -62,6 +65,13 @@ public class Usuario  implements java.io.Serializable {
     
     public void setPassword(String password) {
         this.password = password;
+    }
+    public String getNombre() {
+        return this.nombre;
+    }
+    
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
     public Set<RegistroUsuarioEquipo> getRegistroUsuarioEquipos() {
         return this.registroUsuarioEquipos;

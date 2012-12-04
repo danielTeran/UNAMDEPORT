@@ -1,5 +1,5 @@
 package pojos;
-// Generated 2/12/2012 12:37:15 AM by Hibernate Tools 3.2.1.GA
+// Generated 4/12/2012 04:02:37 PM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -15,7 +15,7 @@ public class Equipos  implements java.io.Serializable {
      private Usuario usuario;
      private String nombre;
      private int puntos;
-     private boolean participando;
+     private int participando;
      private Set<RegistroUsuarioEquipo> registroUsuarioEquipos = new HashSet<RegistroUsuarioEquipo>(0);
      private Set<EncuentroEquipo> encuentroEquipos = new HashSet<EncuentroEquipo>(0);
 
@@ -23,13 +23,13 @@ public class Equipos  implements java.io.Serializable {
     }
 
 	
-    public Equipos(Usuario usuario, String nombre, int puntos, boolean participando) {
+    public Equipos(Usuario usuario, String nombre, int puntos, int participando) {
         this.usuario = usuario;
         this.nombre = nombre;
         this.puntos = puntos;
         this.participando = participando;
     }
-    public Equipos(Usuario usuario, String nombre, int puntos, boolean participando, Set<RegistroUsuarioEquipo> registroUsuarioEquipos, Set<EncuentroEquipo> encuentroEquipos) {
+    public Equipos(Usuario usuario, String nombre, int puntos, int participando, Set<RegistroUsuarioEquipo> registroUsuarioEquipos, Set<EncuentroEquipo> encuentroEquipos) {
        this.usuario = usuario;
        this.nombre = nombre;
        this.puntos = puntos;
@@ -66,11 +66,11 @@ public class Equipos  implements java.io.Serializable {
     public void setPuntos(int puntos) {
         this.puntos = puntos;
     }
-    public boolean isParticipando() {
+    public int getParticipando() {
         return this.participando;
     }
     
-    public void setParticipando(boolean participando) {
+    public void setParticipando(int participando) {
         this.participando = participando;
     }
     public Set<RegistroUsuarioEquipo> getRegistroUsuarioEquipos() {
