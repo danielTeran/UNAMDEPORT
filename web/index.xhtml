@@ -27,33 +27,39 @@
     <h:body>   
         <!--Menú principal-->
         <h:panelGrid style="position: absolute; left: 160px; top: 111px"> 
-        <p:menubar>  
-            <p:submenu label="¿Quiénes somos?" icon="ui-icon-document"/>  
-            
+            <p:menubar>  
+            <p:submenu label="Quiénes somos" icon="ui-icon-document"> 
+                <p:menuitem value="Misión y objetivo" action="mision"/>
+                <p:menuitem value="Reglamento"/>
+            </p:submenu>
             <p:submenu label="Deportes" icon="ui-icon-pencil">  
-                <p:menuitem value="Ajedrez" url="#" icon="ui-icon-arrowreturnthick-1-w" />  
-                <p:menuitem value="Atletismo" url="#" icon="ui-icon-arrowreturnthick-1-e" />  
-                <p:menuitem value="Badminton" url="#" icon="ui-icon-arrowreturnthick-1-e" />
-                <p:menuitem value="Besisbol" url="#" icon="ui-icon-arrowreturnthick-1-e" />
-                <p:menuitem value="Futbol Rápido" url="#" icon="ui-icon-arrowreturnthick-1-e" />
-                <p:menuitem value="Futbol Asoc." url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Ajedrez" action="ajedrez" icon="ui-icon-arrowreturnthick-1-w" />  
+                <p:menuitem value="Atletismo" action="atletismo" icon="ui-icon-arrowreturnthick-1-e" />  
+                <p:menuitem value="Badminton" action="badminton" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Basquetbol" action="basquetbol"/>
+                <p:menuitem value="Besisbol"  action="beisbol" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Futbol Rápido" action="futbolR" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Futbol Asoc."  action="futbolA" icon="ui-icon-arrowreturnthick-1-e" />
                 <p:menuitem value="Natación" url="#" icon="ui-icon-arrowreturnthick-1-e" />
                 <p:menuitem value="Besisbol " url="#" icon="ui-icon-arrowreturnthick-1-e" />
                 <p:menuitem value="Taichi Chuan" url="#" icon="ui-icon-arrowreturnthick-1-e" />
                 <p:menuitem value="Tenis de Mesa" url="#" icon="ui-icon-arrowreturnthick-1-e" />
                 <p:menuitem value="Tochito bandera" url="#" icon="ui-icon-arrowreturnthick-1-e" />
                 <p:menuitem value="Voleibol de Sala" url="#" icon="ui-icon-arrowreturnthick-1-e" />
-                <p:menuitem value="Logros " url="#" icon="ui-icon-arrowreturnthick-1-e" />
-            </p:submenu>  
+                <p:menuitem value="Buceo" url="http://www.buceocienciasunam.com/" icon="ui-icon-arrowreturnthick-1-e" />  
+            </p:submenu>      
             <p:submenu label="Torneos" icon="ui-icon-help">  
                 <p:menuitem value="Torneo 1" />  
                 <p:menuitem value="Torneo 2"/>
-            </p:submenu>  
-            <p:submenu label="Contacto" icon="ui-icon-gear"/>  
-                <p:menuitem value="Ingresar" icon="ui-icon-close" />  
-        </p:menubar>
-    </h:panelGrid>
-        
+            </p:submenu>                 
+            <p:submenu label="Logros deportivos">
+                <p:menuitem value="Logros " url="#" icon="ui-icon-arrowreturnthick-1-e" />       
+            </p:submenu>                
+            <p:menuitem value="Contacto" icon="ui-icon-gear"/>  
+            <p:menuitem value="Ingresar" action="login" icon="ui-icon-close" />  
+       </p:menubar>
+       </h:panelGrid>
+         
     <!--Noticias-->    
     <h:panelGrid style=" position: absolute; left: 435px; top: 200px">
         <p:carousel value="Noticias" itemStyle="height:400px;width:560px;" pageLinks="4" autoPlayInterval="4000"   
@@ -66,8 +72,56 @@
                             style="width: 560px"/>  
             <p:graphicImage value="/Imagenes/imagen4.jpg"
                             style="width: 560px"/>  
-        </p:carousel>  
+        </p:carousel>   
      </h:panelGrid>
+        
+         <!--links-->
+        <p:panel id="dgdyr" style="position: absolute; top: 200px; left: 200px; width: 150px">  
+            <a href="http://www.deportes.unam.mx/">DGADYR</a>
+        </p:panel>
+        <p:tooltip for="dgdyr" value="Dirección General de Actividades Deportivas y Recrativas UNAM" showEffect="fade" hideEffect="fade" />           
+        
+        <p:panel id="odecu" style="position: absolute; top: 250px; left: 200px; width: 150px">  
+            <a href="http://galeon.hispavista.com/odecu/aficiones2596817.html">ODECU</a>
+        </p:panel>
+        <p:tooltip for="odecu" value="Organización Deportiva de Ciudad Universitaria" showEffect="fade" hideEffect="fade" />           
+        
+        <p:panel id="conade" style="position: absolute; top: 300px; left: 200px; width: 150px">  
+            <a href="http://www.conade.gob.mx/">CONADE</a>
+        </p:panel>
+        <p:tooltip for="conade" value="Comision Nacional de Cultura Física y Deporte" showEffect="fade" hideEffect="fade" /> 
+        
+        <p:panel id="codeme" style="position: absolute; top: 350px; left: 200px; width: 150px">  
+            <a href="http://codeme.org.mx/autoctonoytradicional">CODEME</a>
+        </p:panel>
+        <p:tooltip for="codeme" value="Confederación Deportiva Mexicana" showEffect="fade" hideEffect="fade" /> 
+
+        <p:panel id="fisu" style="position: absolute; top: 400px; left: 200px; width: 150px">  
+            <a href="http://www.fisu.net/en/FISU-homepage-3137.html">FISU</a>
+        </p:panel>
+        <p:tooltip for="fisu" value="International University Sports Federation" showEffect="fade" hideEffect="fade" /> 
+
+        <p:panel id="lde" style="position: absolute; top: 450px; left: 200px; width: 150px">  
+            <a href="http://galeon.hispavista.com/ligasdeportivasdecu/">LDE</a>
+        </p:panel>
+        <p:tooltip for="lde" value="Ligas Deportivas Estudiantiles Ciudad Universitaria" showEffect="fade" hideEffect="fade" /> 
+
+        <p:panel id="unam" style="position: absolute; top: 500px; left: 200px; width: 150px">  
+            <a href="http://www.unam.mx/">UNAM</a>
+        </p:panel>
+        <p:tooltip for="unam" value="Universidad Nacional Autónoma de México" showEffect="fade" hideEffect="fade" /> 
+
+        <p:panel id="facCiencias" style="position: absolute; top: 550px; left: 200px; width: 150px">  
+            <a href="http://www.fciencias.unam.mx/">CIENCIAS</a>
+        </p:panel>
+        <p:tooltip for="facCiencias" value="Facultad de Ciencias UNAM" showEffect="fade" hideEffect="fade" /> 
+        
+         <p:panel  style="position: absolute; top: 180px; left: 1180px; width: 90px">  
+            <a href="https://www.facebook.com/deportciencias.unam">
+                <p:graphicImage url="Imagenes/facebook.png" style="width: 50px"/>
+            </a>
+        </p:panel>
+        
     </h:body> 
     </h:form>
     </center>

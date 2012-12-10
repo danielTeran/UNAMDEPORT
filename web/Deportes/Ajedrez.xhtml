@@ -4,8 +4,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       contentType="text/html">
-    
-    <center>
+
     <h:form>
     <h:head>
         <title>Ajedrez</title>
@@ -52,18 +51,38 @@
             <p:submenu label="Contacto" icon="ui-icon-gear"/>  
                 <p:menuitem value="Ingresar" icon="ui-icon-close" />  
         </p:menubar>
-        <p:commandButton value="Inicio" style="left: 460px"/>    
+            <p:commandButton value="Inicio" style="left: 363px" action="inicio" icon="ui-icon-home"/>    
         </h:panelGrid>
                 
         <!--Descripción-->
-        <p:fieldset legend="Club de Ajedrez Ciencias" style=" position: absolute; width: 500px; top: 200px; left: 200px; font-size: 20px; text-align: justify">  
+        <p:fieldset legend="Club de Ajedrez Ciencias" style=" position: absolute; width: 510px; top: 190px; left: 200px; font-size: 18px; text-align: justify">  
             <h:outputText  
                 value="Los logros obtenidos por el Ajedrez de la Facultad es el resultado del trabajo organizado y sistemático de varios estudiantes de la Facultad desde los años 90´s donde podriamos mencionar a el gran Amador Roldán Aguilar como el primer impulsor del Ajedrez de esa época; dicho esfuerzo se incrementó a partir del año 2001, dando como resultado la conformación del Club de Ajedrez de la Facultad de Ciencias Akiba Rubinstein, siendo el responsable del mismo el destacado Ajedrecista de la Facultad Daniel Pellicer; el cual tuvo un gran reconocimiento en nuestra Universidad. Dejando de funcionar en noviembre de 2008 por las actividades Académicas de sus miembros. Por lo que Deportciencias a partir de esta fecha retoma la organización del Ajedrez en la Facultad."/>  
         </p:fieldset>
         
+        <p:panel id="ajedrezUNAM" style="position: absolute; top: 580px; left: 200px">  
+            <a href="http://deportes.unam.mx/disciplinas/ajedrez.php">Ajedrez UNAM</a>
+        </p:panel>
+        <p:tooltip for="ajedrezUNAM" value="Ajedrez en la UNAM" showEffect="fade" hideEffect="fade" /> 
+                                                                  
+        <p:panel id="fenamac" style="position: absolute; top: 580px; left: 378px">  
+            <a href="http://66.7.193.242/~fenamac2/index/">FENAMAC</a>
+        </p:panel>
+        <p:tooltip for="fenamac" value="Federación Nacional de Ajedrez A.C." showEffect="fade" hideEffect="fade" />
+        
+        <p:panel id="fide" style="position: absolute; top: 580px; left: 525px">  
+            <a href="http://www.fide.com/">FIDE</a>
+        </p:panel>
+        <p:tooltip for="fide" value="Word Chesse Federation" showEffect="fade" hideEffect="fade" />
+        
+        <p:panel id="clinicas" style="position: absolute; top: 580px; left: 625px">  
+            <a href="http://mediacampus.cuaed.unam.mx/category/clinicas-de-ajedrez-unam">CLINICAS</a>
+        </p:panel>
+        <p:tooltip for="clinicas" value="Las clínicas de Ajedrez UNAM" showEffect="fade" hideEffect="fade" />
+    
         <!--Galería-->
         <h:panelGrid style=" position: absolute; left: 790px; top: 220px">
-            <p:carousel itemStyle="height:350px;width:450px;" pageLinks="4" autoPlayInterval="4000"   
+            <p:carousel itemStyle="height:350px;width:450px;" pageLinks="5" autoPlayInterval="4000"   
                         rows="1" effect="easeInStrong" circular="true">  
                 <p:graphicImage url="/Imagenes/ajedrez/ajedrez.png"
                                 style="width: 450px"/> 
@@ -72,7 +91,7 @@
                 <p:graphicImage value="/Imagenes/ajedrez/ajedrezInterno2.jpg"
                                 style="width: 450px"/>  
                 <p:graphicImage value="/Imagenes/ajedrez/ajedrezInterno3.jpg"
-                                style="width: 450px"/>
+                                style="width: 450px"/> 
                 <p:graphicImage value="/Imagenes/ajedrez/ajedrezInterno3.jpg"
                                 style="width: 450px"/>
             </p:carousel>  
@@ -80,6 +99,5 @@
         
     </h:body> 
 </h:form>
-</center>
 </f:view>
 

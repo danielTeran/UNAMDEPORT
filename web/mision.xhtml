@@ -1,0 +1,75 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      contentType="text/html">
+    
+    <center>
+    <h:form>
+    <h:head>
+        <title>Misión y Objetivo</title>
+        <h:panelGrid>  
+            <h:graphicImage url="Imagenes/fondoDep.png"
+                            style="position: absolute; left: 440px; top: 0px; width: 860px; height: 110px"/>
+            <h:graphicImage url="Imagenes/prometeo.png"
+                            style="position: absolute; left: 0px; bottom: 0px"/>
+            <h:graphicImage url="Imagenes/Fondo.png"
+                            style="position: absolute; left: 0px; top: 0px; width: 1300px; height: 165px; opacity: 0.3; filter: alpha(opacity=90) "/> 
+            <h:graphicImage url="Imagenes/encabezado-unam.gif"
+                            style="position: absolute; left: 0px; top: 0px; width: 440px; height: 110px"/>
+            <h:graphicImage url="/Imagenes/DeportCiencias3.png"
+                            style="position: absolute; width: 330px; height: 90px; left :930px; top: 10px"/>
+        </h:panelGrid> 
+    
+    </h:head>
+        
+    <h:body>   
+        <!--Menú principal-->
+        <h:panelGrid style="position: absolute; left: 160px; top: 111px"> 
+            <p:menubar>  
+            <p:submenu label="¿Quiénes somos?" icon="ui-icon-document"> 
+                <p:menuitem value="Misión y objetivo"/>
+                <p:menuitem value="Reglamento deportivo"/>
+            </p:submenu>
+            
+            <p:submenu label="Deportes" icon="ui-icon-pencil">  
+                <p:menuitem value="Ajedrez" url="#" icon="ui-icon-arrowreturnthick-1-w" />  
+                <p:menuitem value="Atletismo" url="#" icon="ui-icon-arrowreturnthick-1-e" />  
+                <p:menuitem value="Badminton" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Besisbol" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Futbol Rápido" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Futbol Asoc." url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Natación" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Besisbol " url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Taichi Chuan" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Tenis de Mesa" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Tochito bandera" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Voleibol de Sala" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Logros " url="#" icon="ui-icon-arrowreturnthick-1-e" />
+            </p:submenu>  
+            <p:submenu label="Torneos" icon="ui-icon-help">  
+                <p:menuitem value="Torneo 1" />  
+                <p:menuitem value="Torneo 2"/>
+            </p:submenu>  
+            <p:submenu label="Contacto" icon="ui-icon-gear"/>  
+                <p:menuitem value="Ingresar" icon="ui-icon-close" />  
+       </p:menubar>
+       </h:panelGrid>
+    
+    <p:graphicImage url="Imagenes/goyo2.png" style="position: absolute; top: 410px; left: 1000px; width: 200px; opacity: 0.8; filter: alpha(opacity=80) "/>
+    <p:graphicImage url="Imagenes/goyo.png" style="position: absolute; top: 510px; left: 1100px; width: 150px; opacity: 0.9; filter: alpha(opacity=90) "/>
+            
+    <!--Contenido-->    
+    <p:fieldset legend="Misión" style=" position: absolute; width: 450px; top: 190px; left: 200px; font-size: 23px; text-align: justify">  
+        <h:outputText value="La práctica del deporte es indispensable para que los individuos se desarrollen a plenitud en sus tres esferas; biológica, psicológica y social, de ahí la importancia de fomentar la práctica de diferentes disciplinas al interior de la institución. La facultad, la Universidad y el País necesitan de personas que además de ser hombres de ciencia, sean personas sanas en lo físico y en lo mental, personas que cultiven valores de respeto por si mismos y por lo que los rodea, personas triunfadoras y con metas siempre por alcanzar en la vida."/>  
+    </p:fieldset>
+
+    <p:fieldset legend="Objetivo General" style=" position: absolute; width: 490px; top: 190px; left: 730px; font-size: 21px; text-align: justify">  
+        <h:outputText value="Planear, organizar y dirigir las políticas que permitan el desarrollo de las actividades deportivas y/o recreativas de la Facultad, para la formación integral de los estudiantes, optimizando los recursos humanos y financieros disponibles."/>  
+    </p:fieldset>
+    
+    </h:body> 
+    </h:form>
+    </center>
+</f:view>
