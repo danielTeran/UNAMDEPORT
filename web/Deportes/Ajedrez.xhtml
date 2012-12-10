@@ -1,0 +1,103 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      contentType="text/html">
+
+    <h:form>
+    <h:head>
+        <title>Ajedrez</title>
+        <h:panelGrid>  
+            <h:graphicImage url="Imagenes/fondoDep.png"
+                            style="position: absolute; left: 440px; top: 0px; width: 860px; height: 110px"/>
+            <h:graphicImage url="Imagenes/prometeo.png"
+                            style="position: absolute; left: 0px; bottom: 0px"/>
+            <h:graphicImage url="Imagenes/Fondo.png"
+                            style="position: absolute; left: 0px; top: 0px; width: 1300px; height: 165px; opacity: 0.3; filter: alpha(opacity=90) "/> 
+            <h:graphicImage url="Imagenes/encabezado-unam.gif"
+                            style="position: absolute; left: 0px; top: 0px; width: 440px; height: 110px"/>
+            <h:graphicImage url="/Imagenes/DeportCiencias3.png"
+                            style="position: absolute; width: 330px; height: 90px; left :930px; top: 10px"/>
+        </h:panelGrid> 
+    
+    </h:head>
+        
+    <h:body>   
+        <!--Menú principal-->
+        <h:panelGrid style="position: absolute; left: 160px; top: 111px" columns="2"> 
+        <p:menubar>  
+            <p:submenu label="¿Quiénes somos?" icon="ui-icon-document"/>  
+            
+            <p:submenu label="Deportes" icon="ui-icon-pencil">  
+                <p:menuitem value="Ajedrez" url="#" icon="ui-icon-arrowreturnthick-1-w" />  
+                <p:menuitem value="Atletismo" url="#" icon="ui-icon-arrowreturnthick-1-e" />  
+                <p:menuitem value="Badminton" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Besisbol" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Futbol Rápido" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Futbol Asoc." url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Natación" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Besisbol " url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Taichi Chuan" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Tenis de Mesa" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Tochito bandera" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Voleibol de Sala" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Logros " url="#" icon="ui-icon-arrowreturnthick-1-e" />
+            </p:submenu>  
+            <p:submenu label="Torneos" icon="ui-icon-help">  
+                <p:menuitem value="Torneo 1" />  
+                <p:menuitem value="Torneo 2"/>
+            </p:submenu>  
+            <p:submenu label="Contacto" icon="ui-icon-gear"/>  
+                <p:menuitem value="Ingresar" icon="ui-icon-close" />  
+        </p:menubar>
+            <p:commandButton value="Inicio" style="left: 363px" action="inicio" icon="ui-icon-home"/>    
+        </h:panelGrid>
+                
+        <!--Descripción-->
+        <p:fieldset legend="Club de Ajedrez Ciencias" style=" position: absolute; width: 510px; top: 190px; left: 200px; font-size: 18px; text-align: justify">  
+            <h:outputText  
+                value="Los logros obtenidos por el Ajedrez de la Facultad es el resultado del trabajo organizado y sistemático de varios estudiantes de la Facultad desde los años 90´s donde podriamos mencionar a el gran Amador Roldán Aguilar como el primer impulsor del Ajedrez de esa época; dicho esfuerzo se incrementó a partir del año 2001, dando como resultado la conformación del Club de Ajedrez de la Facultad de Ciencias Akiba Rubinstein, siendo el responsable del mismo el destacado Ajedrecista de la Facultad Daniel Pellicer; el cual tuvo un gran reconocimiento en nuestra Universidad. Dejando de funcionar en noviembre de 2008 por las actividades Académicas de sus miembros. Por lo que Deportciencias a partir de esta fecha retoma la organización del Ajedrez en la Facultad."/>  
+        </p:fieldset>
+        
+        <p:panel id="ajedrezUNAM" style="position: absolute; top: 580px; left: 200px">  
+            <a href="http://deportes.unam.mx/disciplinas/ajedrez.php">Ajedrez UNAM</a>
+        </p:panel>
+        <p:tooltip for="ajedrezUNAM" value="Ajedrez en la UNAM" showEffect="fade" hideEffect="fade" /> 
+                                                                  
+        <p:panel id="fenamac" style="position: absolute; top: 580px; left: 378px">  
+            <a href="http://66.7.193.242/~fenamac2/index/">FENAMAC</a>
+        </p:panel>
+        <p:tooltip for="fenamac" value="Federación Nacional de Ajedrez A.C." showEffect="fade" hideEffect="fade" />
+        
+        <p:panel id="fide" style="position: absolute; top: 580px; left: 525px">  
+            <a href="http://www.fide.com/">FIDE</a>
+        </p:panel>
+        <p:tooltip for="fide" value="Word Chesse Federation" showEffect="fade" hideEffect="fade" />
+        
+        <p:panel id="clinicas" style="position: absolute; top: 580px; left: 625px">  
+            <a href="http://mediacampus.cuaed.unam.mx/category/clinicas-de-ajedrez-unam">CLINICAS</a>
+        </p:panel>
+        <p:tooltip for="clinicas" value="Las clínicas de Ajedrez UNAM" showEffect="fade" hideEffect="fade" />
+    
+        <!--Galería-->
+        <h:panelGrid style=" position: absolute; left: 790px; top: 220px">
+            <p:carousel itemStyle="height:350px;width:450px;" pageLinks="5" autoPlayInterval="4000"   
+                        rows="1" effect="easeInStrong" circular="true">  
+                <p:graphicImage url="/Imagenes/ajedrez/ajedrez.png"
+                                style="width: 450px"/> 
+                <p:graphicImage value="/Imagenes/ajedrez/ajedrezInterno.jpg"
+                                style="width: 450px"/>  
+                <p:graphicImage value="/Imagenes/ajedrez/ajedrezInterno2.jpg"
+                                style="width: 450px"/>  
+                <p:graphicImage value="/Imagenes/ajedrez/ajedrezInterno3.jpg"
+                                style="width: 450px"/> 
+                <p:graphicImage value="/Imagenes/ajedrez/ajedrezInterno3.jpg"
+                                style="width: 450px"/>
+            </p:carousel>  
+        </h:panelGrid>
+        
+    </h:body> 
+</h:form>
+</f:view>
+

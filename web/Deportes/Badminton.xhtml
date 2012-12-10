@@ -1,0 +1,83 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      contentType="text/html">
+    
+    <center>
+    <h:form>
+    <h:head>
+        <title>Badminton</title>
+        <h:panelGrid>  
+            <h:graphicImage url="Imagenes/fondoDep.png"
+                            style="position: absolute; left: 440px; top: 0px; width: 860px; height: 110px"/>
+            <h:graphicImage url="Imagenes/prometeo.png"
+                            style="position: absolute; left: 0px; bottom: 0px"/>
+            <h:graphicImage url="Imagenes/Fondo.png"
+                            style="position: absolute; left: 0px; top: 0px; width: 1300px; height: 165px; opacity: 0.3; filter: alpha(opacity=90) "/> 
+            <h:graphicImage url="Imagenes/encabezado-unam.gif"
+                            style="position: absolute; left: 0px; top: 0px; width: 440px; height: 110px"/>
+            <h:graphicImage url="/Imagenes/DeportCiencias3.png"
+                            style="position: absolute; width: 330px; height: 90px; left :930px; top: 10px"/>
+        </h:panelGrid> 
+    
+    </h:head>
+        
+    <h:body>   
+        <!--Menú principal-->
+        <h:panelGrid style="position: absolute; left: 160px; top: 111px" columns="2"> 
+        <p:menubar>  
+            <p:submenu label="¿Quiénes somos?" icon="ui-icon-document"/>  
+            
+            <p:submenu label="Deportes" icon="ui-icon-pencil">  
+                <p:menuitem value="Ajedrez" url="#" icon="ui-icon-arrowreturnthick-1-w" />  
+                <p:menuitem value="Atletismo" url="#" icon="ui-icon-arrowreturnthick-1-e" />  
+                <p:menuitem value="Badminton" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Besisbol" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Futbol Rápido" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Futbol Asoc." url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Natación" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Besisbol " url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Taichi Chuan" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Tenis de Mesa" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Tochito bandera" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Voleibol de Sala" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Logros " url="#" icon="ui-icon-arrowreturnthick-1-e" />
+            </p:submenu>  
+            <p:submenu label="Torneos" icon="ui-icon-help">  
+                <p:menuitem value="Torneo 1" />  
+                <p:menuitem value="Torneo 2"/>
+            </p:submenu>  
+            <p:submenu label="Contacto" icon="ui-icon-gear"/>  
+                <p:menuitem value="Ingresar" icon="ui-icon-close" />  
+        </p:menubar>
+        <p:commandButton value="Inicio" style="left: 460px"/>    
+        </h:panelGrid>
+        
+        <!--Descripción-->
+        <p:fieldset legend="Badminton en Ciencias" style=" position: absolute; width:330px; top: 190px; left: 240px; font-size: 20px; text-align: justify">  
+            <p:graphicImage url="/Imagenes/badminton/badminton.jpg"
+                            style="height: 380px"/>
+        </p:fieldset>
+        
+        <!--Galería-->
+        <h:panelGrid style=" position: absolute; left: 730px; top: 190px">
+            <p:carousel itemStyle="height:400px;width:500px;" pageLinks="4" autoPlayInterval="4000"   
+                        rows="1" effect="easeInStrong" circular="true">  
+                <p:graphicImage url="/Imagenes/badminton/badminton2.png"
+                                style="width: 500px"/> 
+                <p:graphicImage value="/Imagenes/badminton/badminton1.jpg"
+                                style="width: 500px"/>  
+                <p:graphicImage value="/Imagenes/badminton/badminton2.jpg"
+                                style="width: 500px"/>  
+                <p:graphicImage value="/Imagenes/badminton/badminton3.jpg"
+                                style="width: 500px"/>
+            </p:carousel>  
+        </h:panelGrid>
+        
+    </h:body> 
+</h:form>
+</center>
+</f:view>
+

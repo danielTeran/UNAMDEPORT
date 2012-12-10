@@ -1,0 +1,106 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      contentType="text/html">
+    
+    <center>
+    <h:form>
+    <h:head>
+        <title>Futbol Asociación</title>
+        <h:panelGrid>  
+            <h:graphicImage url="Imagenes/fondoDep.png"
+                            style="position: absolute; left: 440px; top: 0px; width: 860px; height: 110px"/>
+            <h:graphicImage url="Imagenes/prometeo.png"
+                            style="position: absolute; left: 0px; bottom: 0px"/>
+            <h:graphicImage url="Imagenes/Fondo.png"
+                            style="position: absolute; left: 0px; top: 0px; width: 1300px; height: 165px; opacity: 0.3; filter: alpha(opacity=90) "/> 
+            <h:graphicImage url="Imagenes/encabezado-unam.gif"
+                            style="position: absolute; left: 0px; top: 0px; width: 440px; height: 110px"/>
+            <h:graphicImage url="/Imagenes/DeportCiencias3.png"
+                            style="position: absolute; width: 330px; height: 90px; left :930px; top: 10px"/>
+        </h:panelGrid> 
+    
+    </h:head>
+        
+    <h:body>   
+        <!--Menú principal-->
+        <h:panelGrid style="position: absolute; left: 160px; top: 111px" columns="2"> 
+        <p:menubar>  
+            <p:submenu label="¿Quiénes somos?" icon="ui-icon-document"/>  
+            
+            <p:submenu label="Deportes" icon="ui-icon-pencil">  
+                <p:menuitem value="Ajedrez" url="#" icon="ui-icon-arrowreturnthick-1-w" />  
+                <p:menuitem value="Atletismo" url="#" icon="ui-icon-arrowreturnthick-1-e" />  
+                <p:menuitem value="Badminton" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Besisbol" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Futbol Rápido" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Futbol Asoc." url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Natación" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Besisbol " url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Taichi Chuan" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Tenis de Mesa" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Tochito bandera" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Voleibol de Sala" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+                <p:menuitem value="Logros " url="#" icon="ui-icon-arrowreturnthick-1-e" />
+            </p:submenu>  
+            <p:submenu label="Torneos" icon="ui-icon-help">  
+                <p:menuitem value="Torneo 1" />  
+                <p:menuitem value="Torneo 2"/>
+            </p:submenu>  
+            <p:submenu label="Contacto" icon="ui-icon-gear"/>  
+                <p:menuitem value="Ingresar" icon="ui-icon-close" />  
+        </p:menubar>
+        <p:commandButton value="Inicio" style="left: 460px"/>    
+        </h:panelGrid>
+        
+        <!--Descripción-->
+     
+        <p:fieldset legend="Futbol Asociación" style=" position: absolute; width: 480px; height: 380px; top: 180px; left: 180px; font-size: 20px; text-align: justify">  
+            <p:scrollPanel style="width: 480px; height: 330px; border-color: #ffffff; ">
+                <p:panel style="border-bottom-color: #ffffff">
+                <h:outputText value="El futbol asociación, también llamado futbol soccer es un deporte de equipo, en el que se enfrentan dos conjuntos de 11 jugadores cada uno y el árbitro que se ocupa de que las normas se cumplan correctamente. Se juega en un campo rectangular de césped, con una meta o portería a cada lado del campo. El objetivo del juego es desplazar una pelota a través del campo para intentar ubicarla dentro de la meta contraria, acción que se denomina gol. El equipo que marque más goles al cabo del partido es el que resulta ganador."/>
+                <br/><br/><h:outputText value="El juego moderno fue creado en Inglaterra tras la formación de la Football Association, cuyas reglas de 1863 son la base del deporte en la actualidad. El organismo rector del fútbol es la Fédération Internationale de Football Association (FIFA). La competición internacional de fútbol más prestigiosa es la Copa Mundial de la FIFA, realizada cada cuatro años. Este evento es el más famoso y con mayor cantidad de espectadores del mundo, doblando la audiencia de los Juegos Olímpicos."/>
+                </p:panel>
+            </p:scrollPanel>
+        </p:fieldset>
+        
+        <!--links-->
+        <p:panel id="fifra" style="position: absolute; top: 595px; left: 180px">  
+            <a href="http://www.femexfut.org.mx/portalv2/index.html">FMF</a>
+        </p:panel>
+        <p:tooltip for="fifra" value="Federación Mexicana de Futbol Asociación" showEffect="fade" hideEffect="fade" /> 
+        
+        <p:panel id="fifa" style="position: absolute; top: 595px; left: 275px">  
+            <a href="http://es.fifa.com/">FIFA</a>
+        </p:panel> 
+        <p:tooltip for="fifa" value="Federación Internacional de Futbol Asociación" showEffect="fade" hideEffect="fade" />
+        
+        <p:panel id="fbUNAM" style="position: absolute; top: 595px; left: 372px">  
+            <a href="http://www.deportes.unam.mx/disciplinas/futbol_asociacion.php">Futbol UNAM</a>
+        </p:panel> 
+        <p:tooltip for="fbUNAM" value="Futbol Asociación en la UNAM" showEffect="fade" hideEffect="fade" />
+        
+        <!--Galería-->
+        <h:panelGrid style=" position: absolute; left: 750px; top: 190px">
+            <p:carousel itemStyle="height:380px;width:500px;" pageLinks="5" autoPlayInterval="4000"   
+                        rows="1" effect="easeInStrong" circular="true">  
+                <p:graphicImage url="/Imagenes/futbol/futbol.png"
+                                style="width: 500px"/> 
+                <p:graphicImage value="/Imagenes/futbol/Futbol.jpg"
+                                style="width: 500px"/>  
+                <p:graphicImage value="/Imagenes/futbolRapido/futbolV.jpg"
+                                style="width: 500px"/>  
+                <p:graphicImage value="/Imagenes/futbolRapido/atletismo3.jpg"
+                                style="width: 500px"/>
+                <p:graphicImage value="/Imagenes/futbol/futbolF.jpg"
+                                style="width: 500px"/>
+            </p:carousel>  
+        </h:panelGrid>
+        
+    </h:body> 
+</h:form>
+</center>
+</f:view>
+
