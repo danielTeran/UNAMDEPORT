@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="Deportes/futbolAsociacion.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="Deportes/Ajedrez.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="login.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="index.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="mision.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="Deportes/FutbolRapido.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="Deportes/Atletismo.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="Deportes/Badminton.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="Deportes/Basquetbol.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="Deportes/Beisbol.xhtml" x="650" y="150" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
